@@ -3,6 +3,7 @@ package fengjw.com.httpdemo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -12,6 +13,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        VideoServiceTes videoServiceTes = new VideoServiceTes();
+        videoServiceTes.testLocalIpAndMac();
+
         Button button = (Button) findViewById(R.id.btn_http);
         button.setOnClickListener(this);
         Button button1 = (Button) findViewById(R.id.btn_okhttp);
