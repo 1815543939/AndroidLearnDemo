@@ -7,6 +7,15 @@
     tools:context="fengjw.com.httpdemo.MainActivity">
 
     <Button
+        android:id="@+id/btn_GSON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_okhttp"
+        android:textAllCaps="false"
+        android:text="Gson"/>
+    <Button
         android:id="@+id/btn_okhttp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button.setOnClickListener(this);
         Button button1 = (Button) findViewById(R.id.btn_okhttp);
         button1.setOnClickListener(this);
+        Button button2 = (Button) findViewById(R.id.btn_GSON);
+        button2.setOnClickListener(this);
     }
 
     @Override
@@ -33,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_okhttp:
                 Intent intent1 = new Intent(MainActivity.this, OKHttpActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.btn_GSON:
+                Intent intent2 = new Intent(MainActivity.this, GsonActivity.class);
+                startActivity(intent2);
                 break;
             default:
                 break;

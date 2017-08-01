@@ -41,38 +41,41 @@ public class HttpConnectionActivity extends AppCompatActivity implements View.On
         new Thread(new Runnable() {
             @Override
             public void run() {
-                HttpURLConnection connection = null;
-                BufferedReader reader = null;
-                try {
-                    URL url = new URL("https://www.baidu.com");
-                    connection = (HttpURLConnection) url.openConnection();
-                    connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(8000);
-                    connection.setReadTimeout(8000);
-                    InputStream in = connection.getInputStream();
-
-                    //read input stream
-                    reader = new BufferedReader(new InputStreamReader(in));
-                    StringBuilder response = new StringBuilder();
-                    String line;
-                    while ((line = reader.readLine()) != null){
-                        response.append(line);
-                    }
-                    showResponse(response.toString());
-                }catch (Exception e){
-                    e.printStackTrace();
-                }finally {
-                    if (reader != null){
-                        try{
-                            reader.close();
-                        }catch (Exception e){
-                            e.printStackTrace();
-                        }
-                    }
-                    if (connection != null){
-                        connection.disconnect();
-                    }
-                }
+//                HttpURLConnection connection = null;
+//                BufferedReader reader = null;
+//                try {
+//                    URL url = new URL("https://www.baidu.com");
+//                    connection = (HttpURLConnection) url.openConnection();
+//                    connection.setRequestMethod("GET");
+//                    connection.setConnectTimeout(8000);
+//                    connection.setReadTimeout(8000);
+//                    InputStream in = connection.getInputStream();
+//
+//                    //read input stream
+//                    reader = new BufferedReader(new InputStreamReader(in));
+//                    StringBuilder response = new StringBuilder();
+//                    String line;
+//                    while ((line = reader.readLine()) != null){
+//                        response.append(line);
+//                    }
+//                    showResponse(response.toString());
+//                }catch (Exception e){
+//                    e.printStackTrace();
+//                }finally {
+//                    if (reader != null){
+//                        try{
+//                            reader.close();
+//                        }catch (Exception e){
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                    if (connection != null){
+//                        connection.disconnect();
+//                    }
+//                }
+                String url = "https://www.baidu.com";
+                String response = HttpUtil.sendHttpRequest(url);
+                showResponse(response);
             }
         }).start();
     }

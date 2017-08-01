@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -14,6 +16,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.security.cert.X509Certificate;
+import java.util.List;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
@@ -22,14 +25,11 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
-import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class OKHttpActivity extends AppCompatActivity implements View.OnClickListener{
-
-
+public class GsonActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView text_response;
     private String url = "https://10.0.2.2/get_data.json";
     //private String url = "http://10.0.2.15:40609/get_data.json";
@@ -37,40 +37,18 @@ public class OKHttpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_okhttp);
-        Button btn_request = (Button) findViewById(R.id.btn_okrequest);
-        text_response = (TextView) findViewById(R.id.text_okresponse);
+        setContentView(R.layout.activity_gson);
+        Button btn_request = (Button) findViewById(R.id.btn_gsonrequest);
+        text_response = (TextView) findViewById(R.id.text_gsonresponse);
         btn_request.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.btn_okrequest){
-            //sendRequestWithOKHttp();
-            sendNewRequestWithOKHttp();
+        if (view.getId() == R.id.btn_gsonrequest){
+            sendRequestWithOKHttp();
         }
     }
-
-    public void sendNewRequestWithOKHttp(){
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                HttpUtil.sendOKHttpRequest(url,new okhttp3.Callback(){
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-
-                    }
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-                        String responseData = response.body().string();
-                        parseJSONWithJSONObject(responseData);
-                    }
-                });
-            }
-        }).start();
-
-    }
-
 
     private void sendRequestWithOKHttp(){
         new Thread(new Runnable() {
@@ -79,7 +57,7 @@ public class OKHttpActivity extends AppCompatActivity implements View.OnClickLis
                 try{
                     OkHttpClient client = new OkHttpClient.Builder()
                             .sslSocketFactory(createSSLSocketFactory())
-                            .hostnameVerifier(new TrustAllHostnameVerifier())
+                            .hostnameVerifier(new GsonActivity.TrustAllHostnameVerifier())
                             .build();
                     Request request = new Request.Builder().url(url).build();
                     Log.d("fengjw", "request: " + request.toString());
@@ -87,18 +65,35 @@ public class OKHttpActivity extends AppCompatActivity implements View.OnClickLis
                     Log.d("fengjw",response.toString());
                     String responseData = null;
                     if (response.isSuccessful()){
-                         responseData = response.body().string();
+                        responseData = response.body().string();
                     }else {
                         throw new IOException("Unexpected code " + response);
                     }
                     Log.d("fengjw", responseData);
+
+
                     //showResponse(responseData);
-                    parseJSONWithJSONObject(responseData);
+                    //parseJSONWithJSONObject(responseData);
+                    parseJSONWithGSON(responseData);
+
+
                 }catch (Exception e){
                     e.printStackTrace();
                 }
             }
         }).start();
+    }
+
+    private void parseJSONWithGSON(String jsonData){
+        Gson gson = new Gson();
+        List<App> appList = gson.fromJson(jsonData,new TypeToken<List<App>>(){}.getType());
+
+        for (App app : appList){
+            Log.d("fengjw", "id : " + app.getId());
+            Log.d("fengjw", "version : " + app.getVersion());
+            Log.d("fengjw", "name : " + app.getName());
+        }
+
     }
 
     private void parseJSONWithJSONObject(String jsonData){
@@ -151,12 +146,12 @@ public class OKHttpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
 
-    private  SSLSocketFactory createSSLSocketFactory() {
+    private SSLSocketFactory createSSLSocketFactory() {
         SSLSocketFactory ssfFactory = null;
 
         try {
             SSLContext sc = SSLContext.getInstance("TLS");
-            sc.init(null,  new TrustManager[] { new TrustAllCerts() }, new SecureRandom());
+            sc.init(null,  new TrustManager[] { new GsonActivity.TrustAllCerts() }, new SecureRandom());
 
             ssfFactory = sc.getSocketFactory();
         } catch (Exception e) {
@@ -164,5 +159,4 @@ public class OKHttpActivity extends AppCompatActivity implements View.OnClickLis
 
         return ssfFactory;
     }
-
 }
