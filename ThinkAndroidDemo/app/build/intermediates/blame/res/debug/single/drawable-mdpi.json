@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_launcher.png",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\empty_photo.png",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\drawable-mdpi\\empty_photo.png"
+    }
+]

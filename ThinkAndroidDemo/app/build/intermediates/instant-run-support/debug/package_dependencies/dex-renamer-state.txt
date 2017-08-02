@@ -1,0 +1,4 @@
+#Wed Aug 02 09:15:53 CST 2017
+base.0=E\:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\thinkandroid-1.1-bin_ee354824f760dfe748cfd52d1e0cb6c70bab6e38
+renamed.0=classes.dex
+file.0=E\:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\thinkandroid-1.1-bin_ee354824f760dfe748cfd52d1e0cb6c70bab6e38\\classes.dex

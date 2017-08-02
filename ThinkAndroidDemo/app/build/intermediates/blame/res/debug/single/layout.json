@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\splash.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\splash.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thinkandroidmultithreaddownload.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\thinkandroidmultithreaddownload.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thinkandroiddownload.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\thinkandroiddownload.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thinkandroidother.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\thinkandroidother.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thinkandroidimagecache.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\thinkandroidimagecache.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thinkandroiddb.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\thinkandroiddb.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\download_list_item.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\download_list_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thinkandroidcache.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\thinkandroidcache.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cache_item.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\cache_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thinkandroidmvc.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\thinkandroidmvc.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\string_cache_item.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\string_cache_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\simple_download.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\simple_download.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thinkandroidhttp.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\thinkandroidhttp.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thinkandroidmain.xml",
+        "source": "E:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\src\\main\\res\\layout\\thinkandroidmain.xml"
+    }
+]

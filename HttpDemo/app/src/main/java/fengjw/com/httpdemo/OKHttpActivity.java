@@ -29,6 +29,7 @@ import okhttp3.Response;
 
 public class OKHttpActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private static final String TGA = "fengjw";
 
     private TextView text_response;
     private String url = "https://10.0.2.2/get_data.json";
@@ -58,7 +59,8 @@ public class OKHttpActivity extends AppCompatActivity implements View.OnClickLis
                 HttpUtil.sendOKHttpRequest(url,new okhttp3.Callback(){
                     @Override
                     public void onFailure(Call call, IOException e) {
-
+                        Log.d(TGA, e.getMessage());
+                        e.printStackTrace();
                     }
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
@@ -106,12 +108,16 @@ public class OKHttpActivity extends AppCompatActivity implements View.OnClickLis
             JSONArray jsonArray = new JSONArray(jsonData);
             for (int i = 0; i < jsonArray.length(); i ++){
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                String id = jsonObject.getString("id");
-                Log.d("fengjw","Id: " + id);
-                String version = jsonObject.getString("version");
-                Log.d("fengjw","version : " + version);
-                String name = jsonObject.getString("name");
-                Log.d("fengjw","name: " + name);
+                String app_name = jsonObject.getString("app_name");
+                Log.d(TGA,"app_name : " + app_name);
+                String file_name = jsonObject.getString("file_name");
+                Log.d(TGA,"file_name : " + file_name);
+                int ver_code = jsonObject.getInt("ver_code");
+                Log.d(TGA,"ver_code : " + ver_code);
+                String url = jsonObject.getString("url");
+                Log.d(TGA,url);
+                String MD5 = jsonObject.getString("MD5");
+                Log.d(TGA,"MD5 : " + MD5);
             }
         }catch (Exception e){
             e.printStackTrace();

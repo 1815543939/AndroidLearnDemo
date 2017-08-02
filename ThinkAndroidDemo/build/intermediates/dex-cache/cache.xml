@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="E:\AndroidWorkSpace\ThinkAndroidDemo\app\libs\thinkandroid-1.1-bin.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1db0be23f4676b3fce11cab7bd228ad457888b39">
+        <dex dex="E:\AndroidWorkSpace\ThinkAndroidDemo\app\build\intermediates\transforms\dex\debug\folders\1000\2\thinkandroid-1.1-bin_ee354824f760dfe748cfd52d1e0cb6c70bab6e38\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\AndroidWorkSpace\ThinkAndroidDemo\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="E:\AndroidWorkSpace\ThinkAndroidDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_a75dac65946b41b5d711d9416f9ba78f7fab8ee3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\AndroidWorkSpace\ThinkAndroidDemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="929a6cd0981da79571195cb1fdc3e33787171c83">
+        <dex dex="E:\AndroidWorkSpace\ThinkAndroidDemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_8e82d60187efd5618da954cdb8216c8b32d2f0f1\classes.dex" />
+    </item>
+
+</items>

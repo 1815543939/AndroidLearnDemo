@@ -1,0 +1,7 @@
+#Wed Aug 02 09:15:53 CST 2017
+base.0=E\:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a75dac65946b41b5d711d9416f9ba78f7fab8ee3
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=E\:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8e82d60187efd5618da954cdb8216c8b32d2f0f1\\classes.dex
+base.1=E\:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_8e82d60187efd5618da954cdb8216c8b32d2f0f1
+file.0=E\:\\AndroidWorkSpace\\ThinkAndroidDemo\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a75dac65946b41b5d711d9416f9ba78f7fab8ee3\\classes.dex
