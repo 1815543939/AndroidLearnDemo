@@ -30,6 +30,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class GsonActivity extends AppCompatActivity implements View.OnClickListener{
+    private final static String TGA = "fengjw";
     private TextView text_response;
     private String url = "https://10.0.2.2/get_data.json";
     //private String url = "http://10.0.2.15:40609/get_data.json";
@@ -87,13 +88,14 @@ public class GsonActivity extends AppCompatActivity implements View.OnClickListe
     private void parseJSONWithGSON(String jsonData){
         Gson gson = new Gson();
         List<App> appList = gson.fromJson(jsonData,new TypeToken<List<App>>(){}.getType());
-
         for (App app : appList){
-            Log.d("fengjw", "id : " + app.getId());
-            Log.d("fengjw", "version : " + app.getVersion());
-            Log.d("fengjw", "name : " + app.getName());
+            Log.d(TGA, "appName : " + app.getApp_name());
+            Log.d(TGA, "fileName : " + app.getFile_name());
+            Log.d(TGA, "verName : " + app.getVer_name());
+            Log.d(TGA, "verCode : " + app.getVer_code());
+            Log.d(TGA, "url : " + app.getMD5());
+            Log.d(TGA, "MD5 : " + app.getUrl());
         }
-
     }
 
     private void parseJSONWithJSONObject(String jsonData){

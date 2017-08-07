@@ -1,13 +1,13 @@
-package fengjw.com.httpdemo;
+package fengjw.com.httplenarntestdemo;
 
 /**
- * Created by fengjw on 2017/8/1.
+ * Created by fengjw on 2017/8/7.
  */
 
-public class App {
+public class APP {
     private String app_name;
     private String file_name;
-    private String verName;
+    private String ver_name;
     private int ver_code;
     private String url;
     private String MD5;
@@ -29,11 +29,11 @@ public class App {
     }
 
     public String getVer_name() {
-        return verName;
+        return ver_name;
     }
 
-    public void setVer_name(String verName) {
-        this.verName = verName;
+    public void setVer_name(String ver_name) {
+        this.ver_name = ver_name;
     }
 
     public int getVer_code() {
