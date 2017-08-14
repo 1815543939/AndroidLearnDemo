@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import java.io.File;
 
-import static android.R.id.progress;
 
 /**
  * Created by fengjw on 2017/8/13.
@@ -73,7 +72,7 @@ public class DownloadService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        return null;
+        return mBinder;
     }
 
     class DownloadBinder extends Binder{
@@ -119,16 +118,17 @@ public class DownloadService extends Service {
         return (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
     }
 
-    private Notification getNotification(String title, int prigress){
-        Intent intent = new Intent(DownloadService.this, MainActivity.class);
-        PendingIntent pi = PendingIntent.getActivity(DownloadService.this, 0, intent, 0);
+    private Notification getNotification(String title, int progress) {
+        Intent intent = new Intent(this, MainActivity.class);
+        PendingIntent pi = PendingIntent.getActivity(this, 0, intent, 0);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         builder.setSmallIcon(R.mipmap.ic_launcher);
         builder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
         builder.setContentIntent(pi);
         builder.setContentTitle(title);
-        if (progress > 0){
-            builder.setContentText(prigress + "%");
+        if (progress >= 0) {
+            // 当progress大于或等于0时才需显示下载进度
+            builder.setContentText(progress + "%");
             builder.setProgress(100, progress, false);
         }
         return builder.build();

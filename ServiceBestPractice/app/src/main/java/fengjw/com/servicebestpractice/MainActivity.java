@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         pauseDownload.setOnClickListener(this);
         cancelDownload.setOnClickListener(this);
         //Intent
-        Intent intent = new Intent(this, DownloadService.class);
-        startActivity(intent);
+        Intent intent = new Intent(MainActivity.this, DownloadService.class);
+        startService(intent);
         bindService(intent, connection, BIND_AUTO_CREATE); //绑定服务
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED){
@@ -65,7 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         switch (view.getId()){
             case R.id.Start_Download:
-                String url = "https://10.0.2.2/test.zip";
+//                String url = "https://10.0.2.2/test.zip";
+   //             String url = "https://10.0.2.2/test.zip";
+                String url = "https://www.apache.org/dist/httpd/httpd-2.2.34-win32-src.zip";
                 downloadBinder.startDownload(url);
                 break;
             case R.id.Pause_Download:

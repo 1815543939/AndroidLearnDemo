@@ -19,10 +19,10 @@ import okhttp3.Response;
 public class DownloadTask extends AsyncTask<String, Integer, Integer> {
     public static final int TYPE_SUCCESS = 0;
     public static final int TYPE_FAILED = 1;
-    public static final int TYPE_PASUED = 2;
+    public static final int TYPE_PAUSED = 2;
     public static final int TYPE_CANCELED = 3;
 
-    private DownloadListener mListener;
+    private DownloadListener listener;
 
     private boolean isCanceled = false;
 
@@ -31,20 +31,20 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
     private int lastProgress;
 
     public DownloadTask(DownloadListener listener){
-        this.mListener = listener;
+        this.listener = listener;
     }
 
 
     @Override
-    protected Integer doInBackground(String... strings) {
+    protected Integer doInBackground(String... params) {
         InputStream is = null;
         RandomAccessFile savedFile = null;
         File file = null;
 
         try {
             long downloadLength = 0;//记录已下载的文件长度
-            String downloadUrl = strings[0];
-            String fileName = downloadUrl.substring(downloadUrl.lastIndexOf("/"));
+            String downloadUrl = params[0];
+            String fileName = downloadUrl.substring(downloadUrl.lastIndexOf("/"));//substring 拼接的意思
             String directory = Environment.getExternalStoragePublicDirectory
                     (Environment.DIRECTORY_DOWNLOADS).getPath();
             file = new File(directory + fileName);
@@ -75,12 +75,12 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
                     if (isCanceled){
                         return TYPE_CANCELED;
                     }else if (isPaused){
-                        return TYPE_PASUED;
+                        return TYPE_PAUSED;
                     }else {
                         total += len;
                         savedFile.write(b, 0, len);
                         //计算已下载的百分比
-                        int progress = (int) ((total + downloadLength) + 100 / contentLength);
+                        int progress = (int) ((total + downloadLength) * 100 / contentLength);
                         publishProgress(progress);
                     }
                 }
@@ -111,25 +111,24 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
     protected void onProgressUpdate(Integer... values){
         int progress = values[0];
         if (progress > lastProgress){
-            mListener.onProgress(progress);
+            listener.onProgress(progress);
             lastProgress = progress;
         }
     }
 
     protected void onPostExecute(Integer status){
         switch (status){
-            case TYPE_CANCELED:
-                mListener.onCanceled();
-                break;
             case TYPE_SUCCESS:
-                mListener.onSuccess();
+                listener.onSuccess();
                 break;
             case TYPE_FAILED:
-                mListener.onFailed();
+                listener.onFailed();
                 break;
-            case TYPE_PASUED:
-                mListener.onPaused();
+            case TYPE_PAUSED:
+                listener.onPaused();
                 break;
+            case TYPE_CANCELED:
+                listener.onCanceled();
             default:
                 break;
         }
@@ -139,9 +138,6 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
         isPaused = true;
     }
 
-    public void cancelDownload(){
-        isCanceled = true;
-    }
 
     private long getContentLength(String downloadUrl) throws IOException{
         OkHttpClient client = new OkHttpClient();
