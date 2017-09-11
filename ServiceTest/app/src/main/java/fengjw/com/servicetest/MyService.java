@@ -1,20 +1,63 @@
 package fengjw.com.servicetest;
 
-import android.app.Notification;
-import android.app.PendingIntent;
 import android.app.Service;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.os.Binder;
+import android.os.Handler;
 import android.os.IBinder;
-import android.support.annotation.IntDef;
-import android.support.v4.app.NotificationCompat;
+import android.os.Message;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.view.WindowManager;
 
 public class MyService extends Service {
-    private String TGA = "MyService";
+    private final static String TGA = "MyService";
+    private String str = "您有新的应用需要更新\n请问是否进行更新？";
     public MyService() {
     }
+
+    private final static int GET_HANDLER_ONE = 1;
+
+    private Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case GET_HANDLER_ONE:
+                    try {
+                        Log.d(TGA, "index jump!");
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MyService.this);
+                        builder.setTitle("更新提醒");
+                        builder.setMessage(str);
+                        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                                Intent intent = new Intent(MyService.this, MainActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }
+                        });
+                        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                        AlertDialog dialog = builder.create();
+                        dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+                        dialog.show();
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
+
 
     private DownloadBinder mBinder = new DownloadBinder();
 
@@ -43,18 +86,14 @@ public class MyService extends Service {
     public void onCreate() {
         super.onCreate();
         Log.d(TGA, "onCreate");
-        Intent intent = new Intent(MyService.this, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(MyService.this,0,intent,0);
-        Notification notification = new NotificationCompat.Builder(this)
-                .setContentTitle("This is content title")
-                .setContentText("This is content text")
-                .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setLargeIcon(BitmapFactory.decodeResource(getResources(),
-                        R.mipmap.ic_launcher))
-                .setContentIntent(pendingIntent)
-                .build();
-        startForeground(1, notification);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Log.d(TGA, "handler");
+                mHandler.sendEmptyMessage(GET_HANDLER_ONE);
+            }
+        }).start();
+
     }
 
     @Override
@@ -64,9 +103,6 @@ public class MyService extends Service {
             @Override
             public void run() {
 
-
-                //
-                stopSelf();
             }
         }).start();
 
