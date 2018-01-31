@@ -5,26 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/commen_background"
     tools:context="com.fengjw.gridviewonlyonedemo.MainActivity">
 
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp">
-            <GridView
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <com.fengjw.gridviewonlyonedemo.MyGridView
                 android:id="@+id/gridview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:gravity="center"
                 android:numColumns="auto_fit"
                 android:stretchMode="spacingWidthUniform">
-
-            </GridView>
+            </com.fengjw.gridviewonlyonedemo.MyGridView>
         </LinearLayout>
-    </HorizontalScrollView>
-
+        </HorizontalScrollView>
 </LinearLayout>

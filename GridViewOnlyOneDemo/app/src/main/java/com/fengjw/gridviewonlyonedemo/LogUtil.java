@@ -49,6 +49,11 @@ public class LogUtil {
     private static String getTag(){
         StackTraceElement[] trace = new Throwable().fillInStackTrace().getStackTrace();
         String callingClass = "";
+
+//        for (int i = 0; i < trace.length; i ++){
+//            Log.d("fengjw", "trace name : " + trace[i].getClassName());
+//        }
+
         for (int i = 2; i < trace.length; i ++){
             Class<?> clazz = trace[i].getClass();
             if (!clazz.equals(LogUtil.class)){

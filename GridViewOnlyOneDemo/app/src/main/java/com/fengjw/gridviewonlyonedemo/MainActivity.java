@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.ScaleAnimation;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.LinearLayout;
@@ -31,9 +34,10 @@ public class MainActivity extends Activity {
 
     private void initView() {
         mGridview = (GridView) findViewById(R.id.gridview);
+        mGridview.requestFocus();
         mGridview.setOnKeyListener(mGridViewKeyListener);
         mGridview.setOnItemSelectedListener(mSelectedListener);
-
+        mGridview.setOnFocusChangeListener(ItemFocus);
     }
 
     private void setData(){
@@ -47,11 +51,11 @@ public class MainActivity extends Activity {
 
     private void setGridviewData(){
         int size = mList.size();
-        int length = 100;
+        int length = 240;
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         float density = dm.density;
-        int gridviewWidth = (int) (size * (length + 4) * density);
+        int gridviewWidth = (int) (size * (length + 10) * density);
         int itemWidth = (int) (length * density);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
@@ -59,7 +63,7 @@ public class MainActivity extends Activity {
         );
         mGridview.setLayoutParams(params);
         mGridview.setColumnWidth(itemWidth);
-        mGridview.setHorizontalSpacing(5);
+        mGridview.setHorizontalSpacing(10);
         mGridview.setStretchMode(GridView.NO_STRETCH);
         mGridview.setNumColumns(size);
 
@@ -110,5 +114,39 @@ public class MainActivity extends Activity {
             return false;
         }
     };
+
+    private View.OnFocusChangeListener ItemFocus = new View.OnFocusChangeListener() {
+        @Override
+        public void onFocusChange(View view, boolean b) {
+            if (b){
+                zoomOutWindow(view);
+            }else {
+                zoomInWindow(view);
+            }
+        }
+    };
+
+    private void zoomOutWindow(View view) {
+        AnimationSet animationSet = new AnimationSet(true);
+        ScaleAnimation animation = new ScaleAnimation(1.0f, 1.1f, 1.0f, 1.1f,
+                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        animation.setDuration(500);
+        animation.setFillAfter(true);
+        animationSet.addAnimation(animation);
+        animationSet.setFillAfter(true);
+        view.clearAnimation();
+        view.startAnimation(animationSet);
+    }
+
+    private void zoomInWindow(View view) {
+        AnimationSet animationSet = new AnimationSet(true);
+        ScaleAnimation animation = new ScaleAnimation(1.1f, 1.0f, 1.1f, 1.0f,
+                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        animation.setDuration(500);
+        animation.setFillAfter(true);
+        animationSet.addAnimation(animation);
+        animationSet.setFillAfter(true);
+        view.startAnimation(animationSet);
+    }
 
 }
