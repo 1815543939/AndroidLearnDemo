@@ -8,8 +8,10 @@ public interface WeatherPresenter {
 
     /**
      * get weather logic
-     * @param cityId
+     * @param model
+     * @param product
+     * @param sdanum
      */
-    void getWeatherInfo(String cityId);
+    void getWeatherInfo(String model, String product, String sdanum);
 
 }

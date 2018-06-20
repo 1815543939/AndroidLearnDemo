@@ -3,6 +3,7 @@ package com.fengjw.weatherdemo.ui.view;
 
 import com.fengjw.weatherdemo.model.entity.WeatherInfo;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -14,6 +15,6 @@ public interface WeatherView {
     void showLoading();
     void hideLoading();
     void showError();
-    void setWeatherInfo(Call<WeatherInfo> call, Response<WeatherInfo> response);
+    void setWeatherInfo(Call<ResponseBody> call, Response<ResponseBody> response);
 
 }

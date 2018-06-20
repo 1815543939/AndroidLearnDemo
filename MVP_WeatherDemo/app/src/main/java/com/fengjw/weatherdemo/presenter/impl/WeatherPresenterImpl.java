@@ -7,6 +7,7 @@ import com.fengjw.weatherdemo.presenter.OnWeatherListener;
 import com.fengjw.weatherdemo.presenter.WeatherPresenter;
 import com.fengjw.weatherdemo.ui.view.WeatherView;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -29,19 +30,19 @@ public class WeatherPresenterImpl implements WeatherPresenter, OnWeatherListener
     }
 
     @Override
-    public void getWeatherInfo(String cityId) {
+    public void getWeatherInfo(String model, String product, String sdanum) {
         mWeatherView.showLoading();
-        mWeatherModelImpl.loadWeather(cityId, this);
+        mWeatherModelImpl.loadWeather(model, product, sdanum, this);
     }
 
     @Override
-    public void onResponse(Call<WeatherInfo> call, Response<WeatherInfo> response) {
+    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
         mWeatherView.hideLoading();
         mWeatherView.setWeatherInfo(call, response);
     }
 
     @Override
-    public void onFailure(Call<WeatherInfo> call, Throwable t) {
+    public void onFailure(Call<ResponseBody> call, Throwable t) {
         mWeatherView.hideLoading();
         mWeatherView.showError();
     }

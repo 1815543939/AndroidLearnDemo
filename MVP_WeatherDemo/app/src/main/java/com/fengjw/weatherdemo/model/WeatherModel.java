@@ -11,6 +11,6 @@ import com.fengjw.weatherdemo.presenter.OnWeatherListener;
 
 public interface WeatherModel {
 
-    void loadWeather(String cityId, OnWeatherListener weatherListener);
+    void loadWeather(String model, String product, String sdanum, OnWeatherListener weatherListener);
 
 }

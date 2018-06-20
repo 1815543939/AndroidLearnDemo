@@ -13,7 +13,7 @@ public class RetrofitWrapper {
 
     private static Retrofit sRetrofit;
 
-    private RetrofitWrapper(){
+    public RetrofitWrapper(){
         sRetrofit = new Retrofit.Builder().baseUrl(Constant.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create()).build();
     }

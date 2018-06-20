@@ -2,6 +2,7 @@ package com.fengjw.weatherdemo.presenter;
 
 import com.fengjw.weatherdemo.model.entity.WeatherInfo;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -17,7 +18,7 @@ public interface OnWeatherListener {
      * @param call
      * @param response
      */
-    void onResponse(Call<WeatherInfo> call, Response<WeatherInfo> response);
-    void onFailure(Call<WeatherInfo> call, Throwable t);
+    void onResponse(Call<ResponseBody> call, Response<ResponseBody> response);
+    void onFailure(Call<ResponseBody> call, Throwable t);
 
 }

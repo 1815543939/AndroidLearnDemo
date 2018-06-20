@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fengjw.weatherdemo.R;
-import com.fengjw.weatherdemo.model.entity.WeatherInfo;
 import com.fengjw.weatherdemo.presenter.impl.WeatherPresenterImpl;
 import com.fengjw.weatherdemo.ui.view.WeatherView;
 
@@ -19,6 +18,7 @@ import com.fengjw.weatherdemo.ui.view.WeatherView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity implements WeatherView{
     }
 
     @Override
-    public void setWeatherInfo(Call<WeatherInfo> call, Response<WeatherInfo> response) {
-        WeatherInfo weatherInfo = response.body();
+    public void setWeatherInfo(Call<ResponseBody> call, Response<ResponseBody> response) {
+        String weatherInfo = response.body().toString();
         mTextView.setText(weatherInfo.toString());
     }
 
