@@ -15,6 +15,8 @@ import com.fengjw.weatherdemo.presenter.impl.WeatherPresenterImpl;
 import com.fengjw.weatherdemo.ui.view.WeatherView;
 
 
+import java.io.IOException;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -24,8 +26,12 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements WeatherView{
 
-    @BindView(R.id.et_citynumber)
-    EditText mEtCityNumber;
+    @BindView(R.id.et_citynumber1)
+    EditText modelNumber;
+    @BindView(R.id.et_citynumber2)
+    EditText productNumber;
+    @BindView(R.id.et_citynumber3)
+    EditText sdanumNumber;
 
     @BindView(R.id.textview)
     TextView mTextView;
@@ -46,14 +52,25 @@ public class MainActivity extends AppCompatActivity implements WeatherView{
 
     }
 
+    @OnClick(R.id.uninstall_btn)
+    public void clickUninstall(){
+        Log.d("fengjw", "clickUninstall");
+
+
+
+    }
+
     @OnClick(R.id.et_btn)
     public void clickBtn(View view){
         Log.d("fengjw", "clickBtn");
-        String number = null;
-        number = mEtCityNumber.getText().toString();
-        Log.d("fengjw", "number : " + number);
-        if (number != null)
-        mWeatherPresenter.getWeatherInfo(number);
+        String model = null;
+        String product = null;
+        String sdanum = null;
+        model = modelNumber.getText().toString();
+        product = productNumber.getText().toString();
+        sdanum = sdanumNumber.getText().toString();
+        if (model != null && product != null && sdanum != null)
+        mWeatherPresenter.getWeatherInfo(model, product, sdanum);
     }
 
     @Override
@@ -72,9 +89,13 @@ public class MainActivity extends AppCompatActivity implements WeatherView{
     }
 
     @Override
-    public void setWeatherInfo(Call<ResponseBody> call, Response<ResponseBody> response) {
-        String weatherInfo = response.body().toString();
-        mTextView.setText(weatherInfo.toString());
+    public void setWeatherInfo(Call<ResponseBody> call, Response<ResponseBody> response){
+        try {
+            String body = response.body().string();
+            mTextView.setText(body);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
 }

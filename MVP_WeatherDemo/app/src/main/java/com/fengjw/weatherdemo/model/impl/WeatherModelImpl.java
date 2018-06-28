@@ -8,6 +8,8 @@ import com.fengjw.weatherdemo.api.RetrofitWrapper;
 import com.fengjw.weatherdemo.model.WeatherModel;
 import com.fengjw.weatherdemo.presenter.OnWeatherListener;
 
+import java.io.IOException;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,9 +28,8 @@ public class WeatherModelImpl implements WeatherModel{
         Call<ResponseBody> weatherInfo = demoApi.getWeatherInfo(model, product, sdanum);
         weatherInfo.enqueue(new Callback<ResponseBody>() {
             @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response){
                 weatherListener.onResponse(call, response);
-                Log.d("fengjw", "onResponse");
             }
 
             @Override

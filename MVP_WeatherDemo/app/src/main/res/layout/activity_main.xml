@@ -7,15 +7,31 @@
     android:orientation="vertical"
     tools:context=".ui.activity.MainActivity">
     <EditText
-        android:id="@+id/et_citynumber"
+        android:id="@+id/et_citynumber1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="TV358_ATSC"/>
+    <EditText
+        android:id="@+id/et_citynumber2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ktc_8g"/>
+    <EditText
+        android:id="@+id/et_citynumber3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SDA00000000"/>
     <Button
         android:id="@+id/et_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="查询天气"
+        android:text="查询"
         />
+    <Button
+        android:id="@+id/uninstall_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="卸载"/>
     <TextView
         android:id="@+id/textview"
         android:layout_width="wrap_content"

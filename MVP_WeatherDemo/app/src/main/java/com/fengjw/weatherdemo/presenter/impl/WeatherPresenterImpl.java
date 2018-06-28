@@ -1,7 +1,5 @@
 package com.fengjw.weatherdemo.presenter.impl;
 
-import com.fengjw.weatherdemo.model.entity.Weather;
-import com.fengjw.weatherdemo.model.entity.WeatherInfo;
 import com.fengjw.weatherdemo.model.impl.WeatherModelImpl;
 import com.fengjw.weatherdemo.presenter.OnWeatherListener;
 import com.fengjw.weatherdemo.presenter.WeatherPresenter;

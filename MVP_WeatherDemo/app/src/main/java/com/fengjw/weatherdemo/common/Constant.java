@@ -6,5 +6,5 @@ package com.fengjw.weatherdemo.common;
  */
 
 public interface Constant {
-    String BASE_URL = "http://192.168.1.14:2700/index.php/apkapi?model=";
+    String BASE_URL = "http://192.168.1.14:2700/index.php/";
 }
