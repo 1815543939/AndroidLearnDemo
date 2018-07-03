@@ -7,10 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private ListView mListView;
     private FragmentManager fm;
 
+    private BottomDrawerLayout bottom_drawer_layout;
+    private float density;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         rightLayout = (RelativeLayout) findViewById(R.id.right_rl);
         mListView = (ListView) findViewById(R.id.left_listview);
+
+        bottom_drawer_layout = (BottomDrawerLayout) findViewById(R.id.bottom_drawer_layout);
+
         fm = getSupportFragmentManager();
 
         mAdapter = new ContentAdapter(this);
@@ -76,6 +84,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mDrawerLayout.closeDrawer(Gravity.RIGHT);
+            }
+        });
+
+        bottom_drawer_layout.setOnDrawerStatusChanged(new BottomDrawerLayout.OnDrawerStatusChanged() {
+            @Override
+            public void onChanged(int parentHeight, int drawerTop) {
+            //LayoutParams 的类型要用设置时的view的parentview的类型
+                RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+
+                lp.setMargins(0,(int) (1*density), 0, parentHeight - drawerTop+(int) (1*density));
             }
         });
 

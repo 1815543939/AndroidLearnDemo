@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
-    android:id="@+id/drawerlayout"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawerlayout"
+    android:layout_marginBottom="100dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,6 +26,7 @@
                 android:padding="12dp"/>
 
             <TextView
+                android:id="@+id/titlebar_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -35,7 +40,6 @@
                 android:layout_alignParentRight="true"
                 android:padding="12dp"
                 android:src="@drawable/p_center"/>
-
         </RelativeLayout>
 
         <LinearLayout
@@ -69,6 +73,7 @@
         android:background="@android:color/holo_blue_bright">
 
         <ImageView
+            android:id="@+id/image"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_centerInParent="true"
@@ -76,7 +81,7 @@
 
         <TextView
             android:id="@+id/right_text"
-            android:layout_below="@+id/right_img"
+            android:layout_below="@+id/image"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="12dp"
             android:layout_width="wrap_content"
@@ -84,7 +89,47 @@
             android:text="个人中心"
             android:textColor="@android:color/black"
             android:textSize="14sp"/>
-
     </RelativeLayout>
+    </android.support.v4.widget.DrawerLayout>
 
-</android.support.v4.widget.DrawerLayout>
+    <com.weather.drawerlayoutdemo.BottomDrawerLayout
+        android:id="@+id/bottom_drawer_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/dismiss_rl"
+            android:background="@android:color/holo_orange_light"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e0e0e0"/>
+        <TextView
+            android:id="@+id/bottom_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="底部抽屉~"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_bar_rl"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/holo_orange_dark">
+
+            <ImageView
+                android:id="@+id/bottom_bar_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shangzhankai_icon"/>
+
+        </RelativeLayout>
+
+    </com.weather.drawerlayoutdemo.BottomDrawerLayout>
+</RelativeLayout>
