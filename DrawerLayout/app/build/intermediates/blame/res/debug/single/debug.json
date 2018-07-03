@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\layout_news.xml.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\layout\\news.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_p_center.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-xxhdpi\\p_center.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\layout_subscription.xml.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\layout\\subscription.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_item.xml.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\layout\\content_item.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_nursingcareplan2.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-hdpi\\nursingcareplan2.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_mywork_selected.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-hdpi\\mywork_selected.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_personal_selected.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-hdpi\\personal_selected.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_doctoradvice2.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-hdpi\\doctoradvice2.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_p_pic.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-xxhdpi\\p_pic.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_menu.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-xxhdpi\\menu.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_mypatient_selected.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-hdpi\\mypatient_selected.png"
+    },
+    {
+        "merged": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_infusion_selected.png.flat",
+        "source": "E:\\AndroidWorkSpace\\DrawerLayout\\app\\src\\main\\res\\drawable-hdpi\\infusion_selected.png"
+    }
+]
