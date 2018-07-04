@@ -1,0 +1,94 @@
+01-01 23:14:21.022  7003  7003 D fengjw  : i = 0cWidth : 75
+01-01 23:14:21.022  7003  7003 D fengjw  : tWidth : 75 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.022  7003  7003 D fengjw  : i = 0cHeight : 75
+01-01 23:14:21.022  7003  7003 D fengjw  : lHeight : 75 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.022  7003  7003 D fengjw  : i = 1cWidth : 75
+01-01 23:14:21.022  7003  7003 D fengjw  : tWidth : 150 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.022  7003  7003 D fengjw  : i = 1cHeight : 75
+01-01 23:14:21.022  7003  7003 D fengjw  : rHeight : 75 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.022  7003  7003 D fengjw  : i = 2cWidth : 75
+01-01 23:14:21.022  7003  7003 D fengjw  : bWidth : 75 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.022  7003  7003 D fengjw  : i = 2cHeight : 75
+01-01 23:14:21.022  7003  7003 D fengjw  : lHeight : 150 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.022  7003  7003 D fengjw  : i = 3cWidth : 75
+01-01 23:14:21.022  7003  7003 D fengjw  : bWidth : 150 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.022  7003  7003 D fengjw  : i = 3cHeight : 75
+01-01 23:14:21.022  7003  7003 D fengjw  : rHeight : 150 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.024  7003  7003 D fengjw  : i = 0cWidth : 75
+01-01 23:14:21.024  7003  7003 D fengjw  : tWidth : 75 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.024  7003  7003 D fengjw  : i = 0cHeight : 75
+01-01 23:14:21.024  7003  7003 D fengjw  : lHeight : 75 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.024  7003  7003 D fengjw  : i = 1cWidth : 75
+01-01 23:14:21.024  7003  7003 D fengjw  : tWidth : 150 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.024  7003  7003 D fengjw  : i = 1cHeight : 75
+01-01 23:14:21.024  7003  7003 D fengjw  : rHeight : 75 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.024  7003  7003 D fengjw  : i = 2cWidth : 75
+01-01 23:14:21.024  7003  7003 D fengjw  : bWidth : 75 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.024  7003  7003 D fengjw  : i = 2cHeight : 75
+01-01 23:14:21.024  7003  7003 D fengjw  : lHeight : 150 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.024  7003  7003 D fengjw  : i = 3cWidth : 75
+01-01 23:14:21.024  7003  7003 D fengjw  : bWidth : 150 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.024  7003  7003 D fengjw  : i = 3cHeight : 75
+01-01 23:14:21.024  7003  7003 D fengjw  : rHeight : 150 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.092  7003  7003 D fengjw  : 0 : cl : 0 ct : 0
+01-01 23:14:21.092  7003  7003 D fengjw  : 0 : cl : 0 cWidth : 75 cr : 75
+01-01 23:14:21.092  7003  7003 D fengjw  : 0 : cb : 75 cHeight : 75 ct : 0
+01-01 23:14:21.092  7003  7003 D fengjw  : 1 : getWidth : 1920 cWidth : 75
+01-01 23:14:21.092  7003  7003 D fengjw  : 1 : cl : 1845 ct : 0
+01-01 23:14:21.092  7003  7003 D fengjw  : 1 : cl : 1845 cWidth : 75 cr : 1920
+01-01 23:14:21.092  7003  7003 D fengjw  : 1 : cb : 75 cHeight : 75 ct : 0
+01-01 23:14:21.092  7003  7003 D fengjw  : 2 : cl : 0
+01-01 23:14:21.092  7003  7003 D fengjw  : 2 : getHeight : 840 cHeight : 75
+01-01 23:14:21.092  7003  7003 D fengjw  : 2 : cl : 0 cWidth : 75 cr : 75
+01-01 23:14:21.092  7003  7003 D fengjw  : 2 : cb : 840 cHeight : 75 ct : 765
+01-01 23:14:21.092  7003  7003 D fengjw  : 3 : getWidth : 1920 cWidth : 75
+01-01 23:14:21.092  7003  7003 D fengjw  : 3 : getHeight : 840 cHeight : 75 bottomMargin : 0
+01-01 23:14:21.092  7003  7003 D fengjw  : 3 : cl : 1845 cWidth : 75 cr : 1920
+01-01 23:14:21.092  7003  7003 D fengjw  : 3 : cb : 840 cHeight : 75 ct : 765
+01-01 23:14:21.278  7003  7003 D fengjw  : i = 0cWidth : 75
+01-01 23:14:21.278  7003  7003 D fengjw  : tWidth : 75 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.278  7003  7003 D fengjw  : i = 0cHeight : 75
+01-01 23:14:21.278  7003  7003 D fengjw  : lHeight : 75 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.278  7003  7003 D fengjw  : i = 1cWidth : 75
+01-01 23:14:21.278  7003  7003 D fengjw  : tWidth : 150 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.278  7003  7003 D fengjw  : i = 1cHeight : 75
+01-01 23:14:21.278  7003  7003 D fengjw  : rHeight : 75 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.278  7003  7003 D fengjw  : i = 2cWidth : 75
+01-01 23:14:21.278  7003  7003 D fengjw  : bWidth : 75 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.278  7003  7003 D fengjw  : i = 2cHeight : 75
+01-01 23:14:21.278  7003  7003 D fengjw  : lHeight : 150 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.278  7003  7003 D fengjw  : i = 3cWidth : 75
+01-01 23:14:21.278  7003  7003 D fengjw  : bWidth : 150 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.278  7003  7003 D fengjw  : i = 3cHeight : 75
+01-01 23:14:21.279  7003  7003 D fengjw  : rHeight : 150 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.279  7003  7003 D fengjw  : i = 0cWidth : 75
+01-01 23:14:21.279  7003  7003 D fengjw  : tWidth : 75 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.279  7003  7003 D fengjw  : i = 0cHeight : 75
+01-01 23:14:21.279  7003  7003 D fengjw  : lHeight : 75 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.279  7003  7003 D fengjw  : i = 1cWidth : 75
+01-01 23:14:21.279  7003  7003 D fengjw  : tWidth : 150 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.279  7003  7003 D fengjw  : i = 1cHeight : 75
+01-01 23:14:21.279  7003  7003 D fengjw  : rHeight : 75 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.279  7003  7003 D fengjw  : i = 2cWidth : 75
+01-01 23:14:21.279  7003  7003 D fengjw  : bWidth : 75 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.279  7003  7003 D fengjw  : i = 2cHeight : 75
+01-01 23:14:21.279  7003  7003 D fengjw  : lHeight : 150 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.279  7003  7003 D fengjw  : i = 3cWidth : 75
+01-01 23:14:21.279  7003  7003 D fengjw  : bWidth : 150 leftMargin : 0 rightMargin : 0
+01-01 23:14:21.279  7003  7003 D fengjw  : i = 3cHeight : 75
+01-01 23:14:21.279  7003  7003 D fengjw  : rHeight : 150 topMargin : 0 bottomMargin : 0
+01-01 23:14:21.280  7003  7003 D fengjw  : 0 : cl : 0 ct : 0
+01-01 23:14:21.280  7003  7003 D fengjw  : 0 : cl : 0 cWidth : 75 cr : 75
+01-01 23:14:21.280  7003  7003 D fengjw  : 0 : cb : 75 cHeight : 75 ct : 0
+01-01 23:14:21.280  7003  7003 D fengjw  : 1 : getWidth : 1920 cWidth : 75
+01-01 23:14:21.280  7003  7003 D fengjw  : 1 : cl : 1845 ct : 0
+01-01 23:14:21.280  7003  7003 D fengjw  : 1 : cl : 1845 cWidth : 75 cr : 1920
+01-01 23:14:21.280  7003  7003 D fengjw  : 1 : cb : 75 cHeight : 75 ct : 0
+01-01 23:14:21.280  7003  7003 D fengjw  : 2 : cl : 0
+01-01 23:14:21.280  7003  7003 D fengjw  : 2 : getHeight : 840 cHeight : 75
+01-01 23:14:21.280  7003  7003 D fengjw  : 2 : cl : 0 cWidth : 75 cr : 75
+01-01 23:14:21.280  7003  7003 D fengjw  : 2 : cb : 840 cHeight : 75 ct : 765
+01-01 23:14:21.280  7003  7003 D fengjw  : 3 : getWidth : 1920 cWidth : 75
+01-01 23:14:21.280  7003  7003 D fengjw  : 3 : getHeight : 840 cHeight : 75 bottomMargin : 0
+01-01 23:14:21.280  7003  7003 D fengjw  : 3 : cl : 1845 cWidth : 75 cr : 1920
+01-01 23:14:21.280  7003  7003 D fengjw  : 3 : cb : 840 cHeight : 75 ct : 765

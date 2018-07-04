@@ -12,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private BottomDrawerLayout bottom_drawer_layout;
     private float density;
 
+    private CustomImgContainer mContainer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         mListView = (ListView) findViewById(R.id.left_listview);
 
         bottom_drawer_layout = (BottomDrawerLayout) findViewById(R.id.bottom_drawer_layout);
+
+        mContainer = (CustomImgContainer) findViewById(R.id.customimgcontainer);
 
         fm = getSupportFragmentManager();
 

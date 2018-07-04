@@ -92,6 +92,55 @@
     </RelativeLayout>
     </android.support.v4.widget.DrawerLayout>
 
+    <com.weather.drawerlayoutdemo.CustomImgContainer
+        android:id="@+id/customimgcontainer"
+        android:layout_marginTop="96dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA333333">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#FF4444"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#00ff00"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#0000ff"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#FF4444"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </com.weather.drawerlayoutdemo.CustomImgContainer>
+
     <com.weather.drawerlayoutdemo.BottomDrawerLayout
         android:id="@+id/bottom_drawer_layout"
         android:layout_alignParentBottom="true"
@@ -119,7 +168,7 @@
             android:id="@+id/bottom_bar_rl"
             android:visibility="visible"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:background="@android:color/holo_orange_dark">
 
